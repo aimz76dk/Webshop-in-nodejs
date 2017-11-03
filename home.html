@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>api</title>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+</head>
+
+<body>
+    <h1>Customers</h1>
+    <div id="page_content">
+
+    </div>
+
+    <script>
+      $.getJSON("http://localhost:3000/customers", function (data) {
+         
+            var html = ""
+            data.forEach(function(element) {
+                html += "<p><strong>" + element.name + "</strong></p>";
+                html += "<p>" + element.adress + "</p>"
+                html += "<p>" + element.cpr + "</p>" 
+                html += "<p>" + element.zipcode + "</p><br />" 
+            }, this);
+          
+            $("#page_content").html(html); 
+        });
+    </script>
+</body>
+
+</html>

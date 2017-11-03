@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/aimzmadafaka/Webshop-in-nodejs#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
     "mongodb": "^2.2.31"
   }
 }
